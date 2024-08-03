@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class StudentGardeCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of subjects: ");
+        int sub = sc.nextInt();
+        if (sub <= 0) {
+            System.out.println("Please Enter the Valid No.of Subject..!");
+            return;
+        }
+        int totmark = 0;
+        int markpersub = 100;
+
+        for (int i = 1; i <= sub; i++) {
+            System.out.println("Enter the Mark of your Subject " + i + " :");
+            int mark = sc.nextInt();
+
+            if (mark < 0 && mark > 100) {
+                System.out.println("Please Enter the mark range between (0-100)...!");
+            } else {
+                totmark += mark;
+            }
+        }
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println("Total mark obtained= " + totmark);
+        int percent = totmark / sub;
+        System.out.println("Average Percentage= " + percent + "%");
+
+        String grade1 = "S";
+        String grade2 = "A";
+        String grade3 = "B";
+        String grade4 = "C";
+        String grade5 = "D";
+        String grade6 = "F";
+        int grade = 0;
+
+        if (percent > 90 && percent < 100) {
+            System.out.println("Grade Obtained= " + grade1);
+        }
+        if (percent > 80 && percent < 90) {
+            System.out.println("Grade Obtained= " + grade2);
+        }
+        if (percent > 70 && percent < 80) {
+            System.out.println("Grade Obtained= " + grade3);
+        }
+        if (percent > 60 && percent < 70) {
+            System.out.println("Grade Obtained= " + grade4);
+        }
+        if (percent > 50 && percent < 60) {
+            System.out.println("Grade Obtained= " + grade5);
+        }
+
+        else if (percent < 50 && percent > 1) {
+            System.out.println("Grade Obtained= " + grade6);
+        }
+    }
+
+}
