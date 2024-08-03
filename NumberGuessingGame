@@ -1,0 +1,80 @@
+import java.util.Random;
+import java.util.Scanner;
+public class NumberGame {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		Random rand=new Random();
+		System.out.println("Welcome To The Number Guessing Game...!");
+		System.out.println(" ");
+		System.out.println(" ");
+		System.out.println("Choose The Level ");
+		System.out.println("1.Easy ");
+		System.out.println("2.Medium ");
+		System.out.println("3.Hard ");
+		int lev=sc.nextInt();
+		
+		if(lev==1) {
+		System.out.println("You Choose Easy ");
+		int rand_num1=rand.nextInt(11);
+		//System.out.println(rand_num1);
+		System.out.println("Guess Randome Number Between 1-10 ");
+		while(true) {
+		
+		int Guess=sc.nextInt();
+		if(rand_num1==Guess) {
+			System.out.println("WOW! YOU WIN!");
+			break;
+		
+		}
+		else if(rand_num1>Guess) {
+			System.out.println("Sorry! The number is Higher. Guess again..!");
+		}
+		else {
+			System.out.println("Sorry! The number is Lower. Guess again..!");
+		}
+		}
+		}
+		else if(lev==2) {
+		System.out.println("You Choose Medium ");
+		int rand_num2=rand.nextInt(51);
+		//System.out.println(rand_num2);
+		while(true) {
+		System.out.println("Guess Randome Number Between 1-50 ");
+		
+		int Guess=sc.nextInt();
+		if(rand_num2==Guess) {
+			System.out.println("WOW! YOU WIN!");
+			break;
+		}
+		else if(rand_num2>Guess) {
+			System.out.println("Sorry! The number is Higher. Guess again..!");
+		}
+		else {
+			System.out.println("Sorry! The number is Lower. Guess again..!");
+		}
+		}
+		}
+		else {
+		System.out.println("You Choose Hard ");
+		int rand_num3=rand.nextInt(101);
+		//System.out.println(rand_num3);
+		while(true) {
+		System.out.println("Guess Randome Number Between 1-100 ");
+
+		int Guess=sc.nextInt();
+		if(rand_num3==Guess) {
+			System.out.println("WOW! YOU WIN!");
+			break;
+		}
+		else if(rand_num3>Guess) {
+			System.out.println("Sorry! The number is Higher. Guess again..!");
+		}
+		else {
+			System.out.println("Sorry! The number is Lower. Guess again..!");
+		}
+		}
+	}
+		
+		
+		}
+}
